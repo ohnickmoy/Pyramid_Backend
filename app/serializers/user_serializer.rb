@@ -23,7 +23,8 @@ class UserSerializer
           weight: workoutExercise.weight,
           reps: workoutExercise.reps,
           numSets: workoutExercise.numSets,
-          totalReps: workoutExercise.totalReps
+          totalReps: workoutExercise.totalReps,
+          setInfo: workoutExercise.setInfo
         }
       end
       workout = {id:workout.id, user_id: workout.user_id, routine_type: workout.routine_type, workout_date: workout.workout_date, exercises: workoutExercises}
