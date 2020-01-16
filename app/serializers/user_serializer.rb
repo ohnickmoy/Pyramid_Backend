@@ -11,6 +11,8 @@ class UserSerializer
       workoutExercises = WorkoutExercise.all.select do |workoutExercise|
         workout.id === workoutExercise.workout_id
       end
+      workoutExercises = workoutExercises.sort_by {|workoutExercise| workoutExercise.tier}
+      
       workoutExercises = workoutExercises.map do |workoutExercise|
         exercise = Exercise.find(workoutExercise.exercise_id)
 
