@@ -16,8 +16,10 @@ Rails.application.routes.draw do
   end
   namespace :api do
     namespace :v1 do
-      resources :users
 
+      post 'users/:id/nextworkout', to: 'users#createWorkout'
+      
+      resources :users
       resources :users do 
         resources :workouts
       end
