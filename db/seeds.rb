@@ -27,7 +27,7 @@ e3 = Exercise.create(name: 'Lat Pulldown')
 
 puts 'creating workout exercises'
 
-we1 = WorkoutExercise.create(exercise_id: e1.id, workout_id: w1.id, tier: 'T1', weight: 100, reps: 3, numSets: 5, totalReps: 15, setInfo: ["5","5","5","5","5"])
+we1 = WorkoutExercise.create(exercise_id: e1.id, workout_id: w1.id, tier: 'T1', weight: 100, reps: 3, numSets: 5, totalReps: 15, setInfo: ["3","3","3","3","3"])
 we2 = WorkoutExercise.create(exercise_id: e2.id, workout_id: w1.id, tier: 'T2', weight: 80, reps: 10, numSets: 3, totalReps: 30, setInfo: ["10","10","10"])
 we3 = WorkoutExercise.create(exercise_id: e3.id, workout_id: w1.id, tier: 'T3', weight: 55, reps: 15, numSets: 3, totalReps: 30, setInfo: ["15","15","15"])
 
@@ -44,7 +44,7 @@ e6 = Exercise.create(name: 'Dumbbell Row')
 
 puts 'creating workout exercises'
 
-we4 = WorkoutExercise.create(exercise_id: e4.id, workout_id: w2.id, tier: 'T1', weight: 100, reps: 3, numSets: 5, totalReps: 15, setInfo: ["5","5","5","5","5"])
+we4 = WorkoutExercise.create(exercise_id: e4.id, workout_id: w2.id, tier: 'T1', weight: 100, reps: 3, numSets: 5, totalReps: 15, setInfo: ["3","3","3","3","3"])
 we5 = WorkoutExercise.create(exercise_id: e5.id, workout_id: w2.id, tier: 'T2', weight: 80, reps: 10, numSets: 3, totalReps: 30, setInfo: ["10","10","10"])
 we6 = WorkoutExercise.create(exercise_id: e6.id, workout_id: w2.id, tier: 'T3', weight: 55, reps: 15, numSets: 3, totalReps: 30, setInfo: ["15","15","15"])
 
