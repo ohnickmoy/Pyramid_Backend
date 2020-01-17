@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   end
   namespace :api do
     namespace :v1 do
+
+      patch 'workouts/:id/saveworkout', to: 'workouts#saveWorkout'
+
       resources :workouts
     end
   end
