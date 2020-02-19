@@ -1,7 +1,6 @@
 # Pyramid - Rails API
 
 <!--- These are examples. See https://shields.io for others or to customize this set of shields. You might want to include dependencies, project status and licence info here --->
-![GitHub repo size](https://img.shields.io/github/repo-size/ohnickmoy/Pyramid_Backend)
 
 Pyramid was my final project during my time at Flatiron School. This is the repo for backend side of this project. It takes inspiritation from the [GZCL Linear Progression](http://swoleateveryheight.blogspot.com/2014/07/the-gzcl-method-simplified_13.html) weightlifting program. Come check it out!
 
