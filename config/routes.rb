@@ -21,8 +21,11 @@ Rails.application.routes.draw do
     namespace :v1 do
 
       post 'users/:id/nextworkout', to: 'users#createWorkout'
-      
+      # post '/login', to: 'users#login'
       resources :users
+      
+      post '/login', to: 'users#login'
+
       resources :users do 
         resources :workouts
       end

@@ -9,6 +9,10 @@ class Api::V1::UsersController < ApplicationController
         render json: UserSerializer.new(user)
     end
 
+    def login
+        byebug
+    end
+
     def createWorkout
         data = workout_params
         user = User.find_by(id: params[:id])
