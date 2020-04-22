@@ -25,6 +25,7 @@ Rails.application.routes.draw do
       resources :users
       
       post '/login', to: 'users#login'
+      post '/signup', to: 'users#create'
 
       resources :users do 
         resources :workouts

@@ -9,6 +9,10 @@ class Api::V1::UsersController < ApplicationController
         render json: UserSerializer.new(user)
     end
 
+    def create
+        byebug
+    end
+
     def login
         byebug
     end
