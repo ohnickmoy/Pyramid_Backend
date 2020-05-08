@@ -1,4 +1,6 @@
 class Api::V1::UsersController < ApplicationController
+    wrap_parameters :user, include: [:username, :password]
+
     def index
         users = User.all
         render json: UserSerializer.new(users)
@@ -8,6 +10,20 @@ class Api::V1::UsersController < ApplicationController
         user = User.find_by(id: params[:id])
         render json: UserSerializer.new(user)
     end
+
+    def create
+        user = User.create(user_params)
+        #byebug
+        if user.save
+            render json: UserSerializer.new(user), status: :ok
+        else
+            render json: {errors: user.errors.full_messages}
+        end
+    end
+
+    # def login
+    #     byebug
+    # end
 
     def createWorkout
         data = workout_params
@@ -36,6 +52,11 @@ class Api::V1::UsersController < ApplicationController
 
     def workout_params
         params.require(:nextWorkout).permit(:routine_type, :id, :workout_date, exercises: [:tier, :weight, :reps, :numSets, :totalReps, :name, setInfo: []])
+    end
+
+    def user_params
+        #byebug
+        params.require(:user).permit(:username, :password)
     end
 end
  
